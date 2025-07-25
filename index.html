@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+        <title>Project Compras</title>
+    </head>
+    <body>
+        <!-- Overlay transparente -->
+        <div class="overlay" id="overlay"></div>
+
+    <header>
+        <div class="logo">
+        <img src="logo.png" alt="Logo">
+        </div>
+
+        <nav class="menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+        </ul>
+        </nav>
+
+        <!-- Ícone do carrinho -->
+        <div class="cart-icon" id="abrir-carrinho">
+        <i class="ri-shopping-cart-2-fill"></i>
+        <span class="cart-count" id="contador-itens">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+        <div>
+            <h1>Bem-vindo!</h1>
+            <p>Os melhores produtos com os menores preços.</p>
+        </div>
+        <div class="hero-img">
+            <img src="hero-image.jpg" alt="Hero">
+        </div>
+        </section>
+
+        <section class="populares">
+        <h2>Produtos em Destaque</h2>
+        <div class="populares-list">
+            <div class="card">
+            <img src="https://via.placeholder.com/300x180/ff7f50/fff?text=Produto+1" alt="Produto 1">
+            <div class="card-body">
+                <h5 class="card-title">Headphone Gamer</h5>
+                <p class="card-text">Som surround 7.1</p>
+                <p>R$ <strong>149.90</strong></p>
+                <a href="#" class="btn btn-primary adicionar-carrinho" data-nome="Headphone Gamer" data-preco="149.90">Adicionar</a>
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="https://via.placeholder.com/300x180/1e90ff/fff?text=Produto+2" alt="Produto 2">
+            <div class="card-body">
+                <h5 class="card-title">Teclado Mecânico</h5>
+                <p class="card-text">RGB, Switch Azul</p>
+                <p>R$ <strong>199.90</strong></p>
+                <a href="#" class="btn btn-primary adicionar-carrinho" data-nome="Teclado Mecânico" data-preco="199.90">Adicionar</a>
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Carrinho -->
+    <div id="carrinho-container">
+        <button id="fechar-carrinho">&times;</button>
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total-carrinho">Total: R$ 0,00</p>
+        <button id="enviar-zap" class="btn btn-success w-100">Finalizar no WhatsApp</button>
+    </div>
+
+    <script src="script.js"></script>
+    
+    </body>
+</html>

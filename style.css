@@ -1,0 +1,181 @@
+/* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f83600, #f9d423);
+      padding-bottom: 100px;
+    }
+
+    header {
+      background-color: #3e1c33;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav.menu ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav.menu a {
+      color: #f6921d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .cart-icon {
+      position: relative;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      padding: 2px 6px;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .hero {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-img img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .populares h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #b14623;
+    }
+
+    .populares-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .btn-primary {
+      background-color: #f6921d;
+      border: none;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      background-color: #e58000;
+    }
+
+    /* Carrinho Lateral */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 99;
+    }
+
+    #carrinho-container {
+      position: fixed;
+      right: -400px;
+      top: 0;
+      width: 350px;
+      height: 100%;
+      background-color: white;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      padding: 1rem;
+      overflow-y: auto;
+      transition: right 0.4s ease;
+      z-index: 100;
+    }
+
+    #carrinho-container.aberto {
+      right: 0;
+    }
+
+    #carrinho-container h2 {
+      margin-bottom: 1rem;
+    }
+
+    #lista-carrinho {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #lista-carrinho li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      background-color: #f9f9f9;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .btn-remover {
+      background-color: crimson;
+      border: none;
+      color: white;
+      padding: 0 6px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #fechar-carrinho {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      color: crimson;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #enviar-zap {
+      margin-top: 1rem;
+    }
